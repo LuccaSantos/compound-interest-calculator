@@ -1,6 +1,15 @@
 An interest calculator for you to check the profits from your investments
 
-Calculadora de juros simples e compostos 
+Calculadora de juros compostos 
 com aportes mensais 
 taxa indicada em meses ou anos
 graficos
+
+ - - - - - - - - - - - - - - - - - - - 
+ paleta de cores: 
+
+#090809 - preto
+#D6DBC0 - ?
+#69B578 - verde claro
+#3A7D44 - verde
+#254D32 - verde escuro

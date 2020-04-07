@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %} Calculadora de Juros Compostos | CalculaDin {% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="offset-1 col-10 list-div">
+    <h1>CalculaDin</h1>
+    <h2>sua calculadora de juros online</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <!-- OPCOES TEMPO -->
+        <select class="mdb-select md-form" id="">
+            <option value="meses">Meses</option>
+            <option value="anos">Anos</option>
+        </select>
+        <!-- OPCOES JUROS -->
+        <select class="mdb-select md-form" id="">
+                <option value="mensal">% Mensal</option>
+                <option value="anual">% Anual</option>
+            </select>
+        <input type="submit" value="Calcular">
+        <input type="button" value="Limpar">
+    </form>
+</div>
+{% endblock %}
