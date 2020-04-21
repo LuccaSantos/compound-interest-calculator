@@ -1,0 +1,121 @@
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /* Calculadora */
+    body {
+        background-color: #123C00;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .container {
+        color: #4B616F;
+        
+        position: absolute;
+        margin-top: 1em;
+    }
+    .form-row {
+        width:  215px;
+        height: 490px;
+        
+        margin-left: auto;
+        margin-right: auto;
+
+        padding: 20px;
+        border-radius: 10px;
+        background-color: white;
+    }
+    .cifrao {
+        background-color: #123C00;
+        color: white;
+    }
+    .input-interest-option, .input-time-option, .btn {
+        background-color: #123C00;
+        color: white;
+    }
+    .valor-inicial, .valor-mensal, .taxa-juros, .periodo, .botoes, footer{
+        position: absolute;
+        
+    }
+    .valor-mensal {
+        margin-top: 90px;
+    }
+    .taxa-juros {
+        margin-top: 195px;
+    }
+    .periodo {
+        margin-top: 300px;
+    }
+    .botoes {
+        margin-top: 405px;
+        
+    }
+    footer {
+        margin-top: 550px;
+    }
+    .input-valor-inicial, .input-valor-mensal, .input-interest-option, .input-time-option {
+        bottom: 38px;
+        left: 60px;
+    }
+    .btn-limpar {
+        width: 84px;
+    }
+    /* Header */
+    header {
+        text-align: center;
+        height: 150px;
+
+        color: white;
+        background-color: #123C00;
+    }
+    .logomarca {
+        padding-top: 15px;
+    }
+    .logomarca, h1{
+        font-size: 30px;
+    }
+    .logomarca, h2 {
+        font-size: 20px;
+    }
+    /* Footer */
+    footer {
+        width: 100%;
+
+        background-color: #123C00;
+        color: white;
+    }
+    footer a {
+        color: white;
+    }
+    .copyright {
+        width: 235.95px;
+        margin-right: auto;
+        margin-left: auto;
+
+    }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+        /* Calculadora */
+    .container {
+        color: #090809;
+        width: 40%;
+        background-color: #D6DBC0;
+        text-align: center;
+        border-radius: 10px;
+        margin: auto;
+    }
+    .sifrao1 {
+        display: inline-block;
+        height: 22px;
+        width: 35px;
+        background-color: #254D32;
+        position: relative;
+        bottom: 155px;
+        right: 115px;
+    }    
+} 

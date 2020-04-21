@@ -3,24 +3,55 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="offset-1 col-10 list-div">
-    <h1>CalculaDin</h1>
-    <h2>sua calculadora de juros online</h2>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <!-- OPCOES TEMPO -->
-        <select class="mdb-select md-form" id="">
-            <option value="meses">Meses</option>
-            <option value="anos">Anos</option>
-        </select>
-        <!-- OPCOES JUROS -->
-        <select class="mdb-select md-form" id="">
-                <option value="mensal">% Mensal</option>
-                <option value="anual">% Anual</option>
-            </select>
-        <input type="submit" value="Calcular">
-        <input type="button" value="Limpar">
-    </form>
+<hr>
+<div class="container">
+    <div class="form-row">
+        <form method="POST">
+            <div class="valor-inicial">
+                <label class="label-valor-inicial" for="inlineFormInputGroup">Valor inicial:</label>
+                <div class="campo-valor-inicial">
+                    <span class="input-group-text input-group-prepend col-3 cifrao">R$:</span>
+                    <input type="number" class="form-control col-6 input-valor-inicial" id="inlineFormInputGroup"
+                        placeholder="0,00">
+                </div>
+            </div>
+            <!--  -->
+            <div class="valor-mensal">
+                <label for="inlineFormInputGroup">Valor mensal:</label>
+                <div class="campo-valor-mensal">
+                    <span class="input-group-text input-group-prepend col-3 cifrao">R$:</span>
+                    <input type="number" class="form-control col-6 input-valor-mensal" id="inlineFormInputGroup"
+                        placeholder="0,00">
+                </div>
+            </div>
+            <!--  -->
+            <div class="taxa-juros">
+                <label for="inputInterest">Taxa de Juros:</label>
+                <div class="campo-taxa-juros">
+                    <input type="number" class="form-control col-3" id="inputInterest" placeholder="0,00">
+                    <select id="inputState" class="form-control col-6 input-interest-option">
+                        <option selected value="mensal">%Mensal</option>
+                        <option value="anual">%Anual</option>
+                    </select>
+                </div>
+            </div>
+            <!--  -->
+            <div class="periodo">
+                <label for="inputTime">Período em:</label>
+                <div class="campo-periodo">
+                    <input type="text" class="form-control col-3" id="inputTime" placeholder="0,00">
+                    <select id="inputState" class="form-control col-6 input-time-option">
+                        <option selected value="meses">Meses</option>
+                        <option value="anos">Anos</option>
+                    </select>
+                </div>
+            </div>
+            <!--  -->
+            <div class="botoes">
+                <input type="button" class="btn" value="Calcular">
+                <input type="button" class="btn btn-limpar" value="Limpar">
+            </div>
+        </form>
+    </div>
 </div>
 {% endblock %}
